@@ -6,6 +6,10 @@
 		padding-top: 210px;
 		padding-bottom: 63px;
 		position: relative;
+		@media screen and (max-width: 768px) {
+			margin-top: -112px;
+			padding-top: 112px;
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -19,7 +23,8 @@
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 			@media screen and (max-width: 768px) {
-				background-image: url("../../img/wave-bg1mob.svg");
+				background-image: url("../../img/wave-bg-1-mob.svg");
+				height: 113px;
 			}
 		}
 	}

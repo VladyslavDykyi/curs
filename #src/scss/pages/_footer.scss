@@ -17,6 +17,7 @@
 		position: relative;
 		@media screen and (max-width: 768px) {
 			padding-top: 108px;
+			margin-top: -108px;
 		}
 		
 		&:before {
@@ -42,6 +43,7 @@
 	&-wrapper {
 		background-color: $dark-blue;
 		padding-bottom: 51px;
+		margin-top: -35px;
 	}
 	
 	&-logo {
