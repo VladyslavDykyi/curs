@@ -1,5 +1,5 @@
 "use strict";
-(function () {
+(()=>{
 	const burger = document.querySelector(".header-burger");
 	const body = document.querySelector("body");
 	const mob_menu = document.querySelector(".header-second");
