@@ -1,9 +1,14 @@
 "use strict";
-(()=>{
+(() => {
 	const burger = document.querySelector(".header-burger");
 	const body = document.querySelector("body");
 	const mob_menu = document.querySelector(".header-second");
 	const headerFirst = document.querySelector(".header-first");
+	
+	const header_dropdown_wrapper = document.querySelector(".header-dropdown-wrapper");
+	const header_dropdown = header_dropdown_wrapper.querySelector(".header-dropdown");
+	const drop_down = header_dropdown_wrapper.querySelector(".drop-down");
+	
 	
 	burger.addEventListener("click", (e) => {
 		e.stopPropagation();
@@ -28,9 +33,23 @@
 			body.classList.remove("lock");
 			body.classList.remove("substrate");
 		}
+		
+		const isClickInsideDropdown = header_dropdown_wrapper.contains(target);
+		if (!isClickInsideDropdown && header_dropdown_wrapper.classList.contains("active")) {
+			header_dropdown_wrapper.classList.remove("active");
+		}
 	});
 	
 	mob_menu.addEventListener("click", (e) => {
+		e.stopPropagation();
+	});
+	
+	header_dropdown.addEventListener("click", (e) => {
+		e.stopPropagation();
+		header_dropdown_wrapper.classList.toggle("active");
+	});
+	
+	drop_down.addEventListener("click", (e) => {
 		e.stopPropagation();
 	});
 })();

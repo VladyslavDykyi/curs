@@ -1,0 +1,76 @@
+@import '../_variables';
+.studying {
+	
+	&-bg {
+		margin-top: -220px;
+		padding-top: 220px;
+		padding-bottom: 220px;
+		background-color: $blue;
+		@media screen and (max-width: 768px) {
+			margin-top: -115px;
+			padding-top: 115px;
+			padding-bottom: 115px;
+		}
+	}
+	&-title {
+		font-family: $third-family;
+		font-weight: 700;
+		font-size: 54px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		text-align: center;
+		color: $white;
+		margin-bottom: 84px;
+		@media screen and (max-width: 768px) {
+			font-size: 34px;
+			margin-bottom: 193px;
+		}
+	}
+	&-block {
+		max-width: 787px;
+		width: 100%;
+		margin-left: auto;
+		border-radius: 30px;
+		padding: 60px 60px 40px 60px;
+		box-shadow: 12px 12px 0 0 $black;
+		background: $white;
+		margin-bottom: 87px;
+		position: relative;
+		@media screen and (max-width: 768px) {
+			padding: 40px 20px 20px 20px;
+			box-shadow: 6px 6px 0 0 $black;
+		}
+		&::after {
+			content: '';
+			display: block;
+			background-image: url("../../img/studying-octopus.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100%;
+			width: 471px;
+			height: 421px;
+			position: absolute;
+			left: -541px;
+			top: -64px;
+			@media screen and (max-width: 768px) {
+				width: 224px;
+				height: 200px;
+				left: 0;
+				top: -173px;
+			}
+		}
+		& a {
+			@media screen and (max-width: 768px) {
+				margin: 0 auto;
+			}
+		}
+	}
+	&-text {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 130%;
+		letter-spacing: 0.02em;
+		color: $dark_blue;
+		margin-bottom: 30px;
+	}
+}
