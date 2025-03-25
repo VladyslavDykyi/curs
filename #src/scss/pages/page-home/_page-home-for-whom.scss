@@ -11,6 +11,7 @@
 			padding-top: 118px;
 			padding-bottom: 118px;
 		}
+		
 		&::before {
 			background-image: url("../../img/wave-who-bg1.svg");
 			top: 0;
@@ -18,6 +19,7 @@
 				background-image: url("../../img/wave-who-bg1mob.svg");
 			}
 		}
+		
 		&::after {
 			background-image: url("../../img/wave-who-bg2.svg");
 			bottom: 0;
@@ -25,6 +27,7 @@
 				background-image: url("../../img/wave-who-bg2mob.svg");
 			}
 		}
+		
 		&::before,
 		&::after {
 			content: '';
@@ -40,10 +43,12 @@
 			}
 		}
 	}
+	
 	&-wrapper {
 		background-color: #defbff;
 		padding-bottom: 37px;
 	}
+	
 	&-title {
 		font-family: $third-family;
 		font-weight: 700;
@@ -57,6 +62,7 @@
 			font-size: 34px;
 		}
 	}
+	
 	&-list {
 		display: flex;
 		flex-wrap: wrap;
@@ -66,6 +72,7 @@
 			grid-gap: 60px;
 		}
 	}
+	
 	&-item {
 		flex: 1 1 calc(33.33333% - 20px);
 		border-radius: 20px;
@@ -80,6 +87,7 @@
 		@media screen and (max-width: 374px) {
 			padding: 50px 10px 20px;
 		}
+		
 		& picture {
 			display: flex;
 			align-items: center;
@@ -93,11 +101,13 @@
 			background-image: url("../../img/Vector2.png");
 			background-repeat: no-repeat;
 		}
+		
 		&_img {
 			width: 35px;
 			height: 35px;
-			transform: translate(-5px,-5px);
+			transform: translate(-5px, -5px);
 		}
+		
 		&_title {
 			font-family: $third-family;
 			font-weight: 700;
@@ -109,6 +119,7 @@
 			color: $dark_blue;
 			margin-bottom: 16px;
 		}
+		
 		&_text {
 			font-weight: 400;
 			font-size: 18px;
