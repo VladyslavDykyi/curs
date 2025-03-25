@@ -1,0 +1,44 @@
+@import '../_variables';
+.hero {
+	padding-top: 158px;
+	padding-bottom: 220px;
+	max-width: 779px;
+	width: 100%;
+	@media screen and (max-width: 1024px) {
+		padding-top: 185px;
+		padding-bottom: 81px;
+	}
+	&-bg {
+		background-image: url("../../img/bg1.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding-top: 16px;
+		min-height: 758px;
+		@media screen and (max-width: 1024px) {
+			padding-top: 8px;
+		}
+	}
+	&-title {
+		margin-bottom: 8px;
+		font-family: $third-family;
+		font-weight: 700;
+		font-size: 48px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: $white;
+		@media screen and (max-width: 1024px) {
+			font-size: 32px;
+		}
+	}
+	&-text {
+		margin-bottom: 30px;
+		font-weight: 400;
+		font-size: 20px;
+		letter-spacing: 0.02em;
+		color: $white;
+		@media screen and (max-width: 1024px) {
+			font-size: 16px;
+		}
+	}
+}

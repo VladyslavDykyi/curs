@@ -1,63 +1,126 @@
+@import '_variables';
+
 .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 40px;
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+		grid-gap: 10px;
+		position: relative;
+		z-index: 10;
+	}
 	&-wrapper {
-		padding: 10px 0;
+		backdrop-filter: blur(20px);
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 20px;
+		padding: 17px 50px;
+		@media screen and (max-width: 1280px) {
+			padding: 17px 16px;
+		}
+		@media screen and (max-width: 1024px) {
+			display: block;
+			padding: 0;
+			background-color: transparent;
+			backdrop-filter: none;
+		}
+	}
+	&-first {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
+		@media screen and (max-width: 1024px) {
+			padding: 17px 16px;
+			width: 100%;
+			backdrop-filter: blur(20px);
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 20px;
+		}
 	}
-	&-title {
-		font-weight: 400;
-		font-size: 24px;
-		line-height: normal;
-		color: #111;
-		margin-bottom: 0;
-	}
-	&-tabs {
-		& .btn-outline-primary {
-			--bs-btn-bg: #fff;
-			--bs-btn-border-color: #fff;
-			--bs-btn-color: #AAAAAA;
-			--bs-btn-hover-color: #AAAAAA;
-			--bs-btn-active-color: #111111;
-			--bs-btn-hover-bg:#fff;
-			--bs-btn-hover-border-color:#fff;
-			--bs-btn-active-bg:#fff;
-			--bs-btn-active-border-color:#fff;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			line-height: normal;
-			font-weight: 700;
-			font-size: 14px;
-			border-radius: 6px;
-			position: relative;
-			&.active:before {
-				content: '';
-				height: 2px;
-				width: 80%;
-				background-color: #3585F5;
-				border-radius: 2px;
+	&-logo {
+		display: block;
+		& picture {
+			display: flex;
+			& img {
 				display: block;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				transform: translateX(-50%);
+				max-height: 44px;
 			}
 		}
 	}
-	&-actions {
-		& .btn {
+	&-burger {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		padding: 0;
+		display: none;
+		cursor: pointer;
+		@media screen and (max-width: 1024px) {
 			display: flex;
-			align-items: center;
-			grid-gap: 8px;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			border-radius: 6px;
-			background-color: #3585F5;
-			font-weight: 700;
-			line-height: normal;
-			font-size: 14px;
-			text-align: center;
-			color: #fff;
+		}
+		&  .header-burger-close {
+			display: none;
+		}
+		& picture {
+			display: flex;
+		}
+		&.active .header-burger-open {
+			display: none;
+		}
+		&.active .header-burger-close {
+			display: block;
+		}
+	}
+	&-second {
+		flex: 0 2 692px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		grid-gap: 12px;
+		@media screen and (max-width: 1024px) {
+			display: none;
+			width: 100%;
+			flex-direction: column;
+			grid-gap: 40px;
+			padding: 30px 16px;
+			flex: none;
+			backdrop-filter: blur(20px);
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 20px;
+			align-items: flex-start;
+			position: absolute;
+			left: 0;
+			top: 88px;
+		}
+		&.active {
+			display: flex;
+		}
+	}
+	&-link {
+		font-weight: 700;
+		font-size: 16px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: $dark_blue;
+		@media screen and (max-width: 1024px) {
+			font-size: 20px;
+		}
+	}
+	&-dropdown {
+		font-weight: 700;
+		font-size: 16px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: $dark_blue;
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		grid-gap: 4px;
+		cursor: pointer;
+		@media screen and (max-width: 1024px) {
+			font-size: 20px;
 		}
 	}
 }

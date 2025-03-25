@@ -42,22 +42,13 @@ input[type='number']::-webkit-inner-spin-button {
 /*---контейнер сайта ---*/
 .container {
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 16px;
 	width: 100%;
-	max-width: 1270px;
+	max-width: 1372px;
 	@media screen and (max-width: 768px) {
-		padding: 0 8px;
+		max-width: 100%;
 	}
 }
 .d-n {
 	display: none;
-}
-.required {
-	&:after {
-		content: '*';
-		color: #BF1616;
-		@include use-font($I-r, 400);
-		@include use-size(16px, 19px);
-		margin-left: 5px;
-	}
 }
