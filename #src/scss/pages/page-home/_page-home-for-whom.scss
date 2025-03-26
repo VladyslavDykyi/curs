@@ -117,7 +117,8 @@
 			text-transform: uppercase;
 			text-align: center;
 			color: $dark_blue;
-			margin-bottom: 16px;
+			max-width: 367px;
+			margin: 0 auto 16px;
 		}
 		
 		&_text {
@@ -127,6 +128,8 @@
 			letter-spacing: 0.02em;
 			text-align: center;
 			color: $dark_blue;
+			max-width: 367px;
+			margin: 0 auto;
 			@media screen and (max-width: 768px) {
 				font-size: 16px;
 			}

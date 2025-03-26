@@ -877,7 +877,8 @@ body.substrate:before {
   text-transform: uppercase;
   text-align: center;
   color: #182A34;
-  margin-bottom: 16px;
+  max-width: 367px;
+  margin: 0 auto 16px;
 }
 
 .for_who-item_text {
@@ -887,6 +888,8 @@ body.substrate:before {
   letter-spacing: 0.02em;
   text-align: center;
   color: #182A34;
+  max-width: 367px;
+  margin: 0 auto;
 }
 
 .studying-bg {
@@ -1278,7 +1281,7 @@ body.substrate:before {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   grid-gap: 12px;
-  max-width: 566px;
+  max-width: 666px;
   width: 100%;
 }
 
