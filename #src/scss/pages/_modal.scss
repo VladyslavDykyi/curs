@@ -1,5 +1,7 @@
 @import './_variables';
-
+html {
+	scrollbar-gutter: stable;
+}
 .modal {
 	border-radius: 30px;
 	padding: 30px;
@@ -23,6 +25,7 @@
 		z-index: 1000;
 		width: 100%;
 		height: 100%;
+		padding-right: 16px;
 		&[data-open="false"] {
 			display: none;
 		}
