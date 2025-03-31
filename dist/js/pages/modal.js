@@ -1,14 +1,18 @@
 "use strict";
 (function () {
+	const body = document.querySelector("body");
 	const modal = document.querySelector("#modal");
 	const glossaryList = document.querySelector(".glossary-list");
 	const closeBtn = modal.querySelector(".modal-close");
 	
 	const toggleModal = (isOpen) => {
 		modal.dataset.open = isOpen;
+		body.classList.add("lock");
 		if (isOpen) {
 			document.addEventListener("keydown", handleEscape);
+			
 		} else {
+			body.classList.remove("lock");
 			document.removeEventListener("keydown", handleEscape);
 		}
 	};
@@ -16,6 +20,7 @@
 	const handleEscape = (e) => {
 		if (e.key === "Escape") {
 			toggleModal(false);
+			body.classList.remove("lock");
 		}
 	};
 	
