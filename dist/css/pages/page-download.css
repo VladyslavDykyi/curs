@@ -507,6 +507,164 @@ body.substrate:before {
   text-wrap: nowrap;
 }
 
+.download {
+  margin-top: 20px;
+  padding-bottom: 226px;
+}
+
+.download .btn.btn-second {
+  margin: 0 auto;
+}
+
+.download-bg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 16px;
+}
+
+.download-list {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 30px 30px;
+  margin-bottom: 30px;
+}
+
+.download-item {
+  width: calc(50% - 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 20px;
+  border-radius: 20px;
+  padding: 15px 20px 15px 15px;
+  -webkit-box-shadow: 4px 4px 30px -4px rgba(0, 129, 170, 0.25);
+          box-shadow: 4px 4px 30px -4px rgba(0, 129, 170, 0.25);
+  background: #FFFFFF;
+}
+
+.download-item-left {
+  display: grid;
+  grid-gap: 0 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.download-item-left picture {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.download-item-left picture img {
+  border-radius: 20px;
+  width: 128px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.download-item-left .btn {
+  grid-row: 3/5;
+  grid-column: 1/2;
+  padding: 8px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #182A34;
+  grid-gap: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.download-item-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: "Exo2", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #182A34;
+  margin-bottom: 12px;
+}
+
+.download-item-text {
+  grid-row: 2/7;
+  grid-column: 2/3;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #182A34;
+}
+
+.banner {
+  border-radius: 20px;
+  background-image: url("../../img/baner-blue.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 46px;
+  background-image: url("../../img/octopus2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 364px;
+}
+
+.banner-wrapper {
+  max-width: 719px;
+  position: relative;
+  z-index: 10;
+  left: 200px;
+  padding: 76px 20px 74px;
+  border-radius: 20px;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.banner-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -608,6 +766,10 @@ body {
   .header-wrapper {
     padding: 17px 16px;
   }
+
+  .banner-wrapper {
+    left: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -687,6 +849,33 @@ body {
   .header-dropdown-wrapper {
     display: none;
   }
+
+  .download-item {
+    width: 100%;
+  }
+
+  .banner:after {
+    width: 165px;
+    height: 137px;
+    bottom: 0;
+    top: auto;
+    right: 0;
+    background-size: 100% 100%;
+  }
+
+  .banner-wrapper {
+    left: 0;
+    padding: 34px 20px 122px;
+  }
+
+  .banner-title {
+    font-size: 32px;
+    line-height: 110%;
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -736,3 +925,46 @@ body {
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .download {
+    padding-bottom: 130px;
+  }
+
+  .download-item {
+    padding: 12px;
+  }
+
+  .download-item-left {
+    grid-gap: 0;
+  }
+
+  .download-item-left picture {
+    grid-row: 1/4;
+  }
+
+  .download-item-left .btn {
+    grid-row: 7/8;
+    grid-column: 1/7;
+  }
+
+  .download-item-title {
+    grid-row: 1/4;
+    grid-column: 2/7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 12px;
+  }
+
+  .download-item-text {
+    grid-row: 4/7;
+    grid-column: 1/7;
+    margin-top: 12px;
+  }
+}
+
+.webp .banner:after{ background-image: url(../../img/octopus2.webp); }
